@@ -18,6 +18,9 @@
           },
           fontFamily: {
             'outfit': ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'card': '0 25px 0 15px rgba(0,0,0,0.08)',
           }
         }
       }
@@ -32,52 +35,48 @@
     <title>Frontend Mentor | NFT preview card component</title>
 </head>
 <body>
-
-  <div>
-
-    <main>
-      <div>
+  
+  <div class="w-full h-svh md:h-vh bg-mainDarkBlue grid place-items-center">
+    <main class="w-5/6 sm:w-80 max-h-3/4 bg-cardDarkBlue p-6 rounded-2xl font-outfit flex flex-col gap-6 shadow-card">
+      <div class="relative rounded-lg overflow-clip">
         <img src="./images/image-equilibrium.jpg" alt="Equilibrium 3429" /> 
-        <span>
+        <div class="absolute inset-0 bg-cyan/50 grid place-items-center opacity-0 hover:opacity-100 transition">
           <img src="./images/icon-view.svg" alt="View Icon">
-        </span>
-        <h1>
-          <div>
-            <div>
-              
+        </div>
+      </div>
+        <div class="space-y-4 ">
+            <h1 class="text-xl font-semibold text-white hover:text-cyan transition">
               <a href="#">
                 Equilibrium #3429
               </a>
             </h1> 
-            
-            <p>
+            <p class="text-softBlue text-sm tracking-wide leading-relaxed">
               Our Equilibrium collection promotes balance and calm.
             </p>
-            <div>
-              <span>
+            <div class="w-full h-4 flex justify-between text-sm">
+              <span class="text-cyan flex items-center gap-2 font-semibold text-sm">
                 <img src="./images/icon-ethereum.svg" alt="ETH Logo">
                 0.041 ETH
               </span>
-              <span>
+              <span class="text-softBlue flex items-center gap-2">
                 <img src="./images/icon-clock.svg" alt="Clock Icon">
                 3 days left
               </span>
             </div>
+            <div>
           </div>
-          <div>
-            <img src="./images/image-avatar.png" alt="Avatar">
-            <p>
+          <hr class="border-1 border-lineDarkBlue">
+          <div class="h-8 flex gap-4  items-center">
+            <img class="h-full border-[1px] border-white rounded-full" src="./images/image-avatar.png" alt="Avatar">
+            <p class="text-softBlue">
               Creation of 
-              <a href="#">
+              <a class="hover:text-cyan transition" href="#">
                 Jules Wyvern
               </a>
             </p>
           </div>
         </div>
-      </div>
-        
     </main>
-    
   </div>
 </body>
 </html>
